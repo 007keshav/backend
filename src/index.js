@@ -1,7 +1,6 @@
 import express from 'express';
 import connectDB from './db/index.js';
 import dotenv from 'dotenv';
-
 // Load environment variables
 dotenv.config({
   path: './env'

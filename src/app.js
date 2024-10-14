@@ -19,9 +19,22 @@ app.use(express.json({
 
 //configuring data if data is comming from url
 app.use(express.urlencoded({extended:true,limit:"16kb"}))
-
+ 
 //to store files and folder in our server, use express.static in public folder
 app.use(express.static("public"))
 
 app.use(cookieParser())
+
+//routes
+
+import userRouter from "./routes/user.routes.js"
+
+//routes decalration
+app.use("/api/v1/users", userRouter)
+
+
+
+
+
+
 export {app}
